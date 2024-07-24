@@ -4,36 +4,37 @@ import {
     faLinkedinIn,
     faTwitter,
     faGithub,
-    faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHashtag } from '@fortawesome/free-solid-svg-icons';
+import { FACEBOOK, GITHUB, HASHNODE, LINKEDIN, TWITTER } from '../helpers';
 
 const SocialButtons = () => {
     const socialLinks = [
         {
-            name: 'github',
+            name: 'Github',
             icon: faGithub,
-            url: 'https://github.com/devsmranjan',
+            url: GITHUB,
         },
         {
-            name: 'linkedin',
+            name: 'Linkedin',
             icon: faLinkedinIn,
-            url: 'https://www.linkedin.com/in/devsmranjan',
+            url: LINKEDIN,
         },
         {
-            name: 'facebook',
+            name: 'Hashnode',
+            icon: faHashtag,
+            url: HASHNODE,
+        },
+        {
+            name: 'Facebook',
             icon: faFacebookF,
-            url: 'https://www.facebook.com/devsmranjan',
+            url: FACEBOOK,
         },
         {
-            name: 'instagram',
-            icon: faInstagram,
-            url: 'https://www.instagram.com/devsmranjan',
-        },
-        {
-            name: 'twitter',
+            name: 'Twitter',
             icon: faTwitter,
-            url: 'https://twitter.com/devsmranjan',
+            url: TWITTER,
         },
     ];
 
@@ -45,7 +46,7 @@ const SocialButtons = () => {
                         <a
                             href={social.url}
                             target='_blank'
-                            rel='noopener noreferrer'>
+                            rel='noopener noreferrer' title={social.name}>
                             <FontAwesomeIcon icon={social.icon} />
                         </a>
                     </li>
